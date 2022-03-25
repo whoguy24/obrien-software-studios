@@ -12,7 +12,7 @@ import '../App/App.css';
 // This component will render the blue app bar across the top, global to all main app components.
 // It displays the app name, the currently logged in user as well as a button to log out of the application.
 
-function InvalidPath() {
+function NotFound() {
 
     // Render DOM
     return (
@@ -23,4 +23,4 @@ function InvalidPath() {
 }
 
 // Export Component Function
-export default InvalidPath;
+export default NotFound;

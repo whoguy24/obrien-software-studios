@@ -1,7 +1,8 @@
 import './App.css';
 
-import Navigation from '../Navigation/Navigation';
+import { HashRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 
+import Navigation from '../Navigation/Navigation';
 import Skills from '../Skills/Skills';
 import Education from '../Education/Education';
 import Projects from '../Projects/Projects';
@@ -9,20 +10,11 @@ import Home from '../Home/Home';
 import About from '../About/About';
 import FAQ from '../FAQ/FAQ';
 import Contact from '../Contact/Contact';
-
-import InvalidPath from '../InvalidPath/InvalidPath';
-
-import {
-  HashRouter as Router,
-  Navigate,
-  Route,
-  Routes,
-} from 'react-router-dom';
+import NotFound from '../NotFound/NotFound';
 
 function App() {
   return (
     <div className="App">
-
       <Router>
         <Navigation/>
         <Routes>
@@ -34,10 +26,9 @@ function App() {
           <Route exact path='/about' element={<About />} />
           <Route exact path='/faq' element={<FAQ />} />
           <Route exact path='/contact' element={<Contact />} />
-          <Route exact path='*' element={<InvalidPath />} />
+          <Route exact path='*' element={<NotFound />} />
         </Routes>
       </Router>
-
     </div>
   );
 }
