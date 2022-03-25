@@ -17,6 +17,7 @@ function Education() {
     // Render DOM
     return (
         <div>
+            <h2>Education</h2>
         </div>
     );
 }

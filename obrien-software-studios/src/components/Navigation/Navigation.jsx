@@ -5,6 +5,8 @@
 // Import Stylesheets
 import '../App/App.css';
 
+import { useNavigate } from 'react-router-dom';
+
 import Button from '@mui/material/Button';
 
 ///////////////////////////////////////////////////////
@@ -16,16 +18,18 @@ import Button from '@mui/material/Button';
 
 function Navigation() {
 
+    const navigate = useNavigate();
+
     // Render DOM
     return (
         <div className="app-navigation-header">
-            <Button className="app-navigation-header-link" style={{color: 'white'}}>Skills</Button>
-            <Button className="app-navigation-header-link" style={{color: 'white'}}>Education</Button>
-            <Button className="app-navigation-header-link" style={{color: 'white'}}>Projects</Button>
-            <Button className="app-navigation-header-link" style={{color: 'white'}}>Home</Button>
-            <Button className="app-navigation-header-link" style={{color: 'white'}}>About</Button>
-            <Button className="app-navigation-header-link" style={{color: 'white'}}>FAQ</Button>
-            <Button className="app-navigation-header-link" style={{color: 'white'}}>Contact</Button>
+            <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/skills')}>Skills</Button>
+            <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/education')}>Education</Button>
+            <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/projects')}>Projects</Button>
+            <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/home')}>Home</Button>
+            <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/about')}>About</Button>
+            <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/faq')}>FAQ</Button>
+            <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/contact')}>Contact</Button>
         </div>
     );
 }

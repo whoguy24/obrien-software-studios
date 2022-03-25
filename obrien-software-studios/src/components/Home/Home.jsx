@@ -17,6 +17,7 @@ function Home() {
     // Render DOM
     return (
         <div>
+            <h2>Home</h2>
         </div>
     );
 }
