@@ -27,6 +27,11 @@ function Navigation() {
             <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/education')}>Education</Button>
             <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/projects')}>Projects</Button>
             <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/home')}>Home</Button>
+
+
+            <img src="/assets/logo.png" alt="logo"/>
+
+
             <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/about')}>About</Button>
             <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/faq')}>FAQ</Button>
             <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/contact')}>Contact</Button>
