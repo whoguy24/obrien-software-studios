@@ -13,28 +13,28 @@ import Button from '@mui/material/Button';
 ///// COMPONENT FUNCTION //////////////////////////////
 ///////////////////////////////////////////////////////
 
-// This component will render the blue app bar across the top, global to all main app components.
-// It displays the app name, the currently logged in user as well as a button to log out of the application.
-
 function Navigation() {
 
     const navigate = useNavigate();
 
     // Render DOM
     return (
-        <div className="app-navigation-header">
-            <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/skills')}>Skills</Button>
-            <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/education')}>Education</Button>
-            <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/projects')}>Projects</Button>
-            <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/home')}>Home</Button>
+        <div className="navigation-header">
 
+            <div className="navigation-menu-group-left">
+                <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/skills')}>Skills</Button>
+                <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/education')}>Education</Button>
+                <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/projects')}>Projects</Button>
+            </div>
 
-            <img src="/assets/logo.png" alt="logo"/>
+            <img className="navigation-logo" src="logo_white.png" alt="logo" onClick={()=>navigate('/home')}/>
 
+            <div className="navigation-menu-group-right">
+                <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/about')}>About</Button>
+                <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/faq')}>FAQ</Button>
+                <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/contact')}>Contact</Button>
+            </div>
 
-            <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/about')}>About</Button>
-            <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/faq')}>FAQ</Button>
-            <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/contact')}>Contact</Button>
         </div>
     );
 }

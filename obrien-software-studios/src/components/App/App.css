@@ -2,13 +2,35 @@ body {
   margin: 0px;
 }
 
-.app-navigation-header {
+.navigation-header {
   background-color: #0c3e6a;
-  height: 80px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #DDDDDD;
 }
 
-.app-navigation-header-button {
+.navigation-header img {
+  height: 80px;
+  border: 1px solid #DDDDDD;
+}
+
+.navigation-header-button {
   display: inline-block;
   width: 50px;
 }
 
+.navigation-menu-group-left {
+  display: flex;
+  gap: 24px;
+  height: 50px;
+  padding-right: 20px;
+}
+
+.navigation-menu-group-right {
+  display: flex;
+  gap: 24px;
+  height: 50px;
+  padding-left: 20px;
+}
