@@ -11,6 +11,7 @@ import About from '../About/About';
 import FAQ from '../FAQ/FAQ';
 import Contact from '../Contact/Contact';
 import NotFound from '../NotFound/NotFound';
+import Footer from '../Footer/Footer';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route exact path='/contact' element={<Contact />} />
           <Route exact path='*' element={<NotFound />} />
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );

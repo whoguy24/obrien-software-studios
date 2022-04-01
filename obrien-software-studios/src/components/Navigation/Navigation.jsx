@@ -21,18 +21,18 @@ function Navigation() {
     return (
         <div className="navigation-header">
 
-            <div className="navigation-menu-group-left">
-                <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/skills')}>Skills</Button>
-                <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/education')}>Education</Button>
-                <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/projects')}>Projects</Button>
+            <div className="navigation-links-left">
+                <Button variant="text" onClick={()=>navigate('/skills')}>Skills</Button>
+                <Button variant="text" onClick={()=>navigate('/education')}>Education</Button>
+                <Button variant="text" onClick={()=>navigate('/projects')}>Projects</Button>
             </div>
 
-            <img className="navigation-logo" src="logo_white.png" alt="logo" onClick={()=>navigate('/home')}/>
+            <img src="logo_white.png" alt="logo" onClick={()=>navigate('/home')}/>
 
-            <div className="navigation-menu-group-right">
-                <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/about')}>About</Button>
-                <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/faq')}>FAQ</Button>
-                <Button className="app-navigation-header-link" style={{color: 'white'}} onClick={()=>navigate('/contact')}>Contact</Button>
+            <div className="navigation-links-right">
+                <Button variant="text" onClick={()=>navigate('/about')}>About</Button>
+                <Button variant="text" onClick={()=>navigate('/faq')}>FAQ</Button>
+                <Button variant="text" onClick={()=>navigate('/contact')}>Contact</Button>
             </div>
 
         </div>
