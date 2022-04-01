@@ -14,23 +14,20 @@ body {
 .navigation-header img {
   height: 80px;
   border: 1px solid #DDDDDD;
+  box-sizing: border-box;
+  cursor:pointer;
 }
 
-.navigation-header-button {
-  display: inline-block;
-  width: 50px;
-}
-
-.navigation-menu-group-left {
+.navigation-links {
   display: flex;
-  gap: 24px;
-  height: 50px;
-  padding-right: 20px;
 }
 
-.navigation-menu-group-right {
-  display: flex;
-  gap: 24px;
-  height: 50px;
-  padding-left: 20px;
+.navigation-links Button {
+  color: white;
+  padding: 16px;
+  border-radius: 0px;
+}
+
+.navigation-links Button:hover {
+  background-color: #1f5384;
 }
