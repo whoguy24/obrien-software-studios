@@ -2,6 +2,10 @@ body {
   margin: 0px;
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
+
 .navigation-header {
   background-color: #0c3e6a;
   height: 50px;
@@ -18,16 +22,41 @@ body {
   cursor:pointer;
 }
 
-.navigation-links {
+.navigation-links-left {
   display: flex;
+  justify-content: right;
+  width: 400px;
 }
 
-.navigation-links Button {
+.navigation-links-right {
+  display: flex;
+  justify-content: left;
+  width: 400px;
+}
+
+.navigation-links-left Button {
   color: white;
-  padding: 16px;
+  padding: 20px;
   border-radius: 0px;
 }
 
-.navigation-links Button:hover {
+.navigation-links-left Button:hover {
   background-color: #1f5384;
+}
+
+.navigation-links-right Button {
+  color: white;
+  padding: 20px;
+  border-radius: 0px;
+}
+
+.navigation-links-right Button:hover {
+  background-color: #1f5384;
+}
+
+.footer {
+  position:absolute;
+  text-align: center;
+  bottom: 0px; 
+  width: 100%;
 }
