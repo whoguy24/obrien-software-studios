@@ -10,11 +10,20 @@ p, h1, h2, h3, h4, h5, h6 {
   background-color: #0c3e6a;
   height: 50px;
   display: flex;
+  width: 100%;
   justify-content: center;
   border-bottom: 1px solid #DDDDDD;
 }
 
-.navigation-header img {
+.navigation-header-mobile {
+  background-color: #0c3e6a;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.navigation-header-logo {
   height: 80px;
   border: 1px solid #DDDDDD;
   box-sizing: border-box;
@@ -24,11 +33,13 @@ p, h1, h2, h3, h4, h5, h6 {
 .navigation-links-left {
   display: flex;
   justify-content: right;
+  width: 50%;
 }
 
 .navigation-links-right {
   display: flex;
   justify-content: left;
+  width: 50%;
 }
 
 .navigation-links-left Button {
@@ -54,11 +65,19 @@ p, h1, h2, h3, h4, h5, h6 {
 .footer {
   position:absolute;
   text-align: center;
-  bottom: 0px; 
+  bottom: 2px; 
   width: 100%;
+  border-top: 1px solid #DDDDDD;
 }
 
 .navigation-menu-button {
-  position: absolute;
-  top: 0px;
+  width: 50px;
+}
+
+.navigation-menu-button-icon {
+  color: white;
+}
+
+.navigation-placeholder {
+  width: 50px;
 }

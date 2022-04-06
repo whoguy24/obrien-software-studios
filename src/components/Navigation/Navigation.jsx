@@ -39,73 +39,87 @@ function Navigation() {
 
     window.addEventListener('resize', handleContentSizeChange)
 
+    function handleNavClick(path) {
+        navigate(path)
+        setDrawerActive(false)
+    }
+
     // Render DOM
     return (
         <div>
 
-            <div className="navigation-header">
+            { width > 850 ?
 
-                { width > 850 &&
+                <div className="navigation-header">
+
                     <div className="navigation-links-left">
-                        <Button variant="text" onClick={()=>navigate('/skills')}>Skills</Button>
-                        <Button variant="text" onClick={()=>navigate('/education')}>Education</Button>
-                        <Button variant="text" onClick={()=>navigate('/projects')}>Projects</Button>
+                        <Button variant="text" onClick={()=>handleNavClick('/skills')}>Skills</Button>
+                        <Button variant="text" onClick={()=>handleNavClick('/education')}>Education</Button>
+                        <Button variant="text" onClick={()=>handleNavClick('/projects')}>Projects</Button>
                     </div>  
-                }
 
-                <img src="logo_white.png" alt="logo" onClick={()=>navigate('/home')}/>
-
-                { width > 850 &&
+                    <img className='navigation-header-logo' src="logo_white.png" alt="logo" onClick={()=>handleNavClick('/home')}/>
 
                     <div className="navigation-links-right">
-
-                        <Button variant="text" onClick={()=>navigate('/about')}>About</Button>
-                        <Button variant="text" onClick={()=>navigate('/faq')}>FAQ</Button>
-                        <Button variant="text" onClick={()=>navigate('/contact')}>Contact</Button>
-
+                        <Button variant="text" onClick={()=>handleNavClick('/about')}>About</Button>
+                        <Button variant="text" onClick={()=>handleNavClick('/faq')}>FAQ</Button>
+                        <Button variant="text" onClick={()=>handleNavClick('/contact')}>Contact</Button>
                     </div>
 
-                }
+                </div>
 
-            </div>
+            :
 
-            <IconButton className='navigation-menu-button' onClick={()=>setDrawerActive(!drawerActive)}><MenuIcon/></IconButton>
+                <div className="navigation-header-mobile">
+
+                    <div className='navigation-placeholder'>
+                    </div>
+
+                    <img className='navigation-header-logo' src="logo_white.png" alt="logo" onClick={()=>navigate('/home')}/>
+
+                    <IconButton className='navigation-menu-button' onClick={()=>setDrawerActive(!drawerActive)}>
+                        <MenuIcon className='navigation-menu-button-icon'/>
+                    </IconButton>
+
+                </div>
+
+            }
 
             <Drawer variant="temporary" open={drawerActive} onClose={()=>setDrawerActive(false)} anchor={'bottom'}>
 
                 <List>
                     <ListItem disablePadding>
-                        <ListItemButton>
+                        <ListItemButton onClick={()=>handleNavClick('/skills')}>
                             <ListItemText primary="Skills" />
                         </ListItemButton>
                     </ListItem>
 
                     <ListItem disablePadding>
-                        <ListItemButton>
+                        <ListItemButton onClick={()=>handleNavClick('/education')}>
                             <ListItemText primary="Education" />
                         </ListItemButton>
                     </ListItem>
 
                     <ListItem disablePadding>
-                        <ListItemButton>
+                        <ListItemButton onClick={()=>handleNavClick('/projects')}>
                             <ListItemText primary="Projects" />
                         </ListItemButton>
                     </ListItem>
 
                     <ListItem disablePadding>
-                        <ListItemButton>
+                        <ListItemButton onClick={()=>handleNavClick('/about')}>
                             <ListItemText primary="About" />
                         </ListItemButton>
                     </ListItem>
 
                     <ListItem disablePadding>
-                        <ListItemButton>
+                        <ListItemButton onClick={()=>handleNavClick('/faq')}>
                             <ListItemText primary="FAQ" />
                         </ListItemButton>
                     </ListItem>
 
                     <ListItem disablePadding>
-                        <ListItemButton>
+                        <ListItemButton onClick={()=>handleNavClick('/contact')}>
                             <ListItemText primary="Contact" />
                         </ListItemButton>
                     </ListItem>
