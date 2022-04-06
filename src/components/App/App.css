@@ -81,3 +81,8 @@ p, h1, h2, h3, h4, h5, h6 {
 .navigation-placeholder {
   width: 50px;
 }
+
+.navigation-menu-list {
+  background-color: #0c3e6a;
+  color: white;
+}

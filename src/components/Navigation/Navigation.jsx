@@ -87,7 +87,7 @@ function Navigation() {
 
             <Drawer variant="temporary" open={drawerActive} onClose={()=>setDrawerActive(false)} anchor={'bottom'}>
 
-                <List>
+                <List className='navigation-menu-list'>
                     <ListItem disablePadding>
                         <ListItemButton onClick={()=>handleNavClick('/skills')}>
                             <ListItemText primary="Skills" />
