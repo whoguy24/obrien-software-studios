@@ -17,19 +17,10 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navigation/>
         <Routes>
           <Route path="/" element={<Navigate replace to="/home" />} />
           <Route exact path='/home' element={<Home />} />
-          <Route exact path='/skills' element={<Skills />} />
-          <Route exact path='/education' element={<Education />} />
-          <Route exact path='/projects' element={<Projects />} />
-          <Route exact path='/about' element={<About />} />
-          <Route exact path='/faq' element={<FAQ />} />
-          <Route exact path='/contact' element={<Contact />} />
-          <Route exact path='*' element={<NotFound />} />
         </Routes>
-        <Footer/>
       </Router>
     </div>
   );
