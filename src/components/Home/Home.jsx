@@ -3,7 +3,7 @@
 ///////////////////////////////////////////////////////
 
 // Import Stylesheets
-import '../App/App.css';
+import '../Home/Home.css';
 
 ///////////////////////////////////////////////////////
 ///// COMPONENT FUNCTION //////////////////////////////
@@ -13,7 +13,7 @@ function Home() {
 
     // Render DOM
     return (
-        <div>
+        <div id="home">
         </div>
     );
 }
