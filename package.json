@@ -11,6 +11,7 @@
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "heroku": "^7.63.0",
     "lottie-web": "^5.9.6",
     "mui": "^0.0.1",
     "react": "^18.1.0",
@@ -46,5 +47,4 @@
     ],
     "heroku-run-build-script": true
   }
-  
 }
