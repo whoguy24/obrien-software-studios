@@ -9,6 +9,7 @@ body {
   justify-content: center;
   height: 100vh;
   width: 100%;
+  padding: 20%;
   background-image: linear-gradient(rgb(73, 88, 198), rgb(29, 9, 158));
 }
 
@@ -16,16 +17,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 800px;
-  width: 1000px;
 }
 
 #home-container-interior {
   display: flex;
   position: relative;
-  width: 80%;
-  height: 80%;
-  /* border: solid #f33; */
 }
 
 @keyframes fadeIn {
@@ -34,59 +30,62 @@ body {
 }
 
 @keyframes slide-right {
-  0% {
+  from {
     transform: translateX(100%);
     overflow: hidden;
+    opacity: 0;
   }
-  100% {
+  to {
     transform: translateX(0);
     overflow: hidden;
+    opacity: 1;
   }
 }
 
 @keyframes slide-left {
-  0% {
+  from {
     transform: translateX(-100%);
     overflow: hidden;
+    opacity: 0;
   }
-  100% {
+  to {
     transform: translateX(0);
     overflow: hidden;
+    opacity: 1;
   }
 }
 
-
 #home-desktop {
-  margin-left: 28%;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  height: 400px;
-  animation: slide-right 1s forwards;
+  display: flex;
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  object-fit: contain;
+  animation: slide-right 3s forwards;
 }
 
 #home-laptop {
   position: absolute;
-  height: 250px;
-  bottom: 80px;
-  left: 40px;
-  animation: slide-left 1s forwards;
+  height: 55%;
+  bottom: -5%;
+  left: -25%;
+  animation: slide-left 3s forwards;
 }
 
 #home-tablet {
   position: absolute;
-  height: 180px;
-  bottom: 100px;
-  right: -54px;
-  animation-delay: 1s;
-  animation: slide-right 1s forwards;
+  height: 42%;
+  bottom: -2%;
+  right: -10%;
+  animation: slide-right 3s forwards;
 }
 
 #home-mobile {
   position: absolute;
-  height: 120px;
-  bottom: 100px;
-  right: -70px;
-  animation-delay: 2s;
-  animation: slide-right 1s forwards;
+  height: 30%;
+  bottom: -3%;
+  right: -15%;
+  animation: slide-right 3s forwards;
 }
